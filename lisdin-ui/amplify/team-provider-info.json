@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lisdinui-dev-171223-authRole",
+      "UnauthRoleArn": "arn:aws:iam::123904136439:role/amplify-lisdinui-dev-171223-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::123904136439:role/amplify-lisdinui-dev-171223-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lisdinui-dev-171223-deployment",
+      "UnauthRoleName": "amplify-lisdinui-dev-171223-unauthRole",
+      "StackName": "amplify-lisdinui-dev-171223",
+      "StackId": "arn:aws:cloudformation:us-east-1:123904136439:stack/amplify-lisdinui-dev-171223/e4295ce0-d0a5-11ec-aa77-1248d0656afd",
+      "AmplifyAppId": "d31sgbybs41vly"
+    },
+    "categories": {
+      "auth": {
+        "lisdinui54e04756": {}
+      }
+    }
+  }
+}
