@@ -9,35 +9,35 @@ import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import CommentIcon from '@mui/icons-material/Comment';
 import Badge from '@mui/material/Badge'
 
-export const IdeaItem = (data) => {
+export const IdeaItem = ({imagePath , imageAlt, title, description, likesCount, commentsCount}) => {
     return (
         <Card sx={{ maxWidth: 210 }}>
             <CardMedia
                 component = "img"
-                image = {data.imagePath}
-                alt = {data.imageAlt}
+                image = {imagePath}
+                alt = {imageAlt}
                 sx = {{ height: 140, width: 200 }}
             />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div">
-                    {data.title}
+                   {title}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">
-                    {data.description} 
+                    {description} 
                 </Typography>
             </CardContent>    
 
             <CardActions>
             
                     <IconButton aria-label="add to favorites">
-                        <Badge anchorOrigin={{ vertical: 'bottom', horizontal: 'right'}} color="secondary" badgeContent={data.likesCount}>
+                        <Badge anchorOrigin={{ vertical: 'bottom', horizontal: 'right'}} color="secondary" badgeContent={likesCount}>
                             <ArrowDropUpIcon/>
                         </Badge>
                     </IconButton>
             
                 
                     <IconButton aria-label="express">
-                    <Badge anchorOrigin={{ vertical: 'bottom', horizontal: 'right'}} color="secondary" badgeContent={data.commentsCount}>
+                    <Badge anchorOrigin={{ vertical: 'bottom', horizontal: 'right'}} color="secondary" badgeContent={commentsCount}>
                         <CommentIcon/>
                     </Badge>
                     </IconButton>
