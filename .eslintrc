@@ -1,0 +1,82 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "eslint-plugin-react",
+    "eslint-plugin-import",
+    "eslint-plugin-react-hooks"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react-hooks/recommended"
+  ],
+  "rules": {
+    "@typescript-eslint/no-extra-semi": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-empty-function": "warn",
+    "@typescript-eslint/no-unused-vars": ["warn", { "varsIgnorePattern": "^_$" }],
+    "jsx-a11y/img-redundant-alt": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-tag-spacing": "warn",
+    "react/jsx-props-no-multi-spaces": "warn",
+    "react/no-unescaped-entities": "error",
+    "import/order": "warn",
+    "no-unused-vars": ["warn", { "varsIgnorePattern": "^_$" }],
+    "no-throw-literal": "off",
+    "comma-dangle": [
+      "warn",
+      {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "never"
+      }
+    ],
+    "arrow-spacing": [
+      "warn",
+      {
+        "before": true,
+        "after": true
+      }
+    ],
+    "object-curly-spacing": [
+      "warn",
+      "always"
+    ],
+    "space-in-parens": [
+      "warn",
+      "never"
+    ],
+    "space-unary-ops": [
+      "warn",
+      {
+        "words": true,
+        "nonwords": false
+      }
+    ],
+    "spaced-comment": "warn",
+    "prefer-destructuring": "warn",
+    "no-multi-spaces": "warn",
+    "semi": [
+      "warn",
+      "never"
+    ],
+    "space-infix-ops": "warn",
+    "comma-spacing": [
+      "warn",
+      {
+        "before": false,
+        "after": true
+      }
+    ],
+    "no-trailing-spaces": "warn"
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  }
+}
