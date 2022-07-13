@@ -9,14 +9,23 @@ import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp'
 import CommentIcon from '@mui/icons-material/Comment'
 import Badge from '@mui/material/Badge'
 
-export const IdeaItem = ({
+type Props = {
+  imagePath: string
+  imageAlt: string
+  title: string
+  description: string
+  likesCount: string
+  commentsCount: string
+}
+
+const IdeaItem = ({
   imagePath,
   imageAlt,
   title,
   description,
   likesCount,
   commentsCount,
-}) => {
+}: Props) => {
   return (
     <Card sx={{ maxWidth: 210 }}>
       <CardMedia
@@ -58,3 +67,5 @@ export const IdeaItem = ({
     </Card>
   )
 }
+
+export default IdeaItem

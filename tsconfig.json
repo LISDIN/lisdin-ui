@@ -14,7 +14,9 @@
     "resolveJsonModule": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "typeRoots": ["./types"]
+    "typeRoots": ["./types"],
+    "rootDirs": ["./src", "./types"]
   },
-  "include": ["src", "./types"]
+  "include": ["src", "./types"],
+  "exclude": ["**/node_modules/**"]
 }

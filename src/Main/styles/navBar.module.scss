@@ -1,0 +1,7 @@
+@use '../../utils/mixins.scss' as *;
+
+.navContainer {
+  @include flex-display(row, center);
+
+  border-bottom: 1px solid var(--primary-01);
+}

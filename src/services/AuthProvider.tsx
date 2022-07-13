@@ -1,14 +1,14 @@
-import Amplify from 'aws-amplify'
-import awsmobile from './aws-exports'
+import { createContext, PropsWithChildren } from 'react'
+import { Amplify } from '@aws-amplify/core'
 import { Authenticator } from '@aws-amplify/ui-react'
+import awsmobile from '../aws-exports'
 import '@aws-amplify/ui-react/styles.css'
-import React from 'react'
 
 Amplify.configure(awsmobile)
 
-export const AuthContext = React.createContext()
+export const AuthContext = createContext(null as any)
 
-export const AuthProvider = ({ children }) => {
+export const AuthProvider = (props: PropsWithChildren) => {
   return (
     <Authenticator
       variation="modal"
@@ -21,7 +21,7 @@ export const AuthProvider = ({ children }) => {
     >
       {({ signOut, user }) => (
         <AuthContext.Provider value={{ signOut, user }}>
-          {children}
+          {props.children}
         </AuthContext.Provider>
       )}
     </Authenticator>
