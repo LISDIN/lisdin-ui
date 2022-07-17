@@ -1,4 +1,4 @@
-export const ideas = [
+export const ideas: Idea[] = [
   {
     imageAlt: 'groove moves',
     imagePath: 'Assets/lisdin-ideas/featured/groove-moves.svg',
@@ -6,6 +6,8 @@ export const ideas = [
     description: 'A new way to work out',
     likesCount: '0',
     commentsCount: '0',
+    owner: 'other',
+    category: 'latest',
   },
   {
     imageAlt: 'under art',
@@ -14,6 +16,8 @@ export const ideas = [
     description: 'Promote your new works for others to speculate',
     likesCount: '0',
     commentsCount: '0',
+    owner: 'other',
+    category: 'latest',
   },
   {
     imageAlt: 'neon',
@@ -22,6 +26,8 @@ export const ideas = [
     description: 'Choose your color choice of light',
     likesCount: '0',
     commentsCount: '0',
+    owner: 'other',
+    category: 'featured',
   },
   {
     imageAlt: 'quick place',
@@ -30,6 +36,8 @@ export const ideas = [
     description: 'The newest and most efficient way to move in',
     likesCount: '0',
     commentsCount: '0',
+    owner: 'other',
+    category: 'featured',
   },
   {
     imageAlt: 'dn',
@@ -38,6 +46,8 @@ export const ideas = [
     description: 'Drink now while you still can',
     likesCount: '0',
     commentsCount: '0',
+    owner: 'other',
+    category: 'recommended',
   },
   {
     imageAlt: 'crash',
@@ -46,5 +56,27 @@ export const ideas = [
     description: 'Hangout and meet new friends',
     likesCount: '0',
     commentsCount: '0',
+    owner: 'user',
+    category: 'recommended',
   },
+  {
+    imageAlt: 'good-book',
+    imagePath: 'Assets/lisdin-ideas/good_book.svg',
+    title: 'Goodbook',
+    description: 'Enjoy a read',
+    likesCount: '0',
+    commentsCount: '0',
+    owner: 'other',
+    category: 'trending',
+  },
+  {
+    imageAlt: 'ice-cream',
+    imagePath: 'Assets/lisdin-ideas/ice-cream.svg',
+    title: 'Cream&Bake',
+    description: 'Have a sweet delight!',
+    likesCount: '0',
+    commentsCount: '0',
+    owner: 'other',
+    category: 'trending',
+  }
 ]
