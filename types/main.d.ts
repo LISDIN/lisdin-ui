@@ -18,10 +18,12 @@ export declare global {
    * @description list of items containing information about the
    *              desired primary features of the application
    * @param label client-facing label for the feature
-   * @param element corresponding ReactElement for the feature's page
+   * @param path route to the feature
+   * @param element Reactelement to be used for route
    * @param navInfo {@link NavInfo}
    */
   type AppContent = {
+    label: string
     path: string
     element: ReactElement
     navInfo?: NavInfo

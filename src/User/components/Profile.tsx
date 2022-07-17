@@ -1,7 +1,6 @@
 import { Fragment, useContext } from 'react'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 import { useNavigate } from 'react-router-dom'
-
 import { AuthContext } from '../../services/AuthProvider'
 import styles from '../styles/profile.module.scss'
 import { reduceFormSpecs } from '../../utils/forms'

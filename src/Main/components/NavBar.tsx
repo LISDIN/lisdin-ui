@@ -9,12 +9,14 @@ type Props = {
   navItems: NavItems
 }
 
+const NAV_ICON_STYLE = { fontSize: 60, color: 'var(--primary-01)' }
+
 const NavBar = (props: Props) => {
   const { signOut } = useContext(AuthContext)
 
   const NavItems = props.navItems.map((e) => (
-    <Link to={e.path} key={e.path}>
-      <e.navInfo.NavIcon sx={{ fontSize: 80, color: 'var(--primary-01)' }} />
+    <Link to={e.path} title={e.label} key={e.path}>
+      <e.navInfo.NavIcon sx={NAV_ICON_STYLE} />
     </Link>
   ))
 
@@ -25,7 +27,7 @@ const NavBar = (props: Props) => {
       <InputBase
         placeholder="Search"
         sx={{
-          fontSize: 40,
+          fontSize: 20,
           border: '2px solid var(--primary-01)',
           borderRadius: '5px',
           padding: '5px',
@@ -35,10 +37,7 @@ const NavBar = (props: Props) => {
 
       {NavItems.filter((_, i) => !props.navItems[i].navInfo.beforeSearch)}
 
-      <ExitToAppIcon
-        sx={{ fontSize: 80, color: 'var(--primary-01)' }}
-        onClick={() => signOut()}
-      />
+      <ExitToAppIcon sx={NAV_ICON_STYLE} onClick={() => signOut()} />
     </nav>
   )
 }
