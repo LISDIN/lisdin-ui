@@ -7,6 +7,7 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt'
 import EmailIcon from '@mui/icons-material/Email'
 import NotificationsIcon from '@mui/icons-material/Notifications'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
+import { useEffect } from 'react'
 import { AuthProvider } from './services/AuthProvider'
 import Profile from './User/components/Profile'
 import Home from './Main/components/Home'
@@ -19,6 +20,7 @@ import NavBar from './Main/components/NavBar'
 
 const APP_CONTENT: Array<AppContent> = [
   {
+    label: 'Home',
     path: '/home',
     element: <Home />,
     navInfo: {
@@ -27,6 +29,7 @@ const APP_CONTENT: Array<AppContent> = [
     },
   },
   {
+    label: 'Ideas',
     path: '/ideas',
     element: <Ideas />,
     navInfo: {
@@ -35,6 +38,7 @@ const APP_CONTENT: Array<AppContent> = [
     },
   },
   {
+    label: 'Collaborate',
     path: '/collaborate',
     element: <Collaborate />,
     navInfo: {
@@ -43,6 +47,7 @@ const APP_CONTENT: Array<AppContent> = [
     },
   },
   {
+    label: 'Messages',
     path: '/messages',
     element: <Messages />,
     navInfo: {
@@ -51,6 +56,7 @@ const APP_CONTENT: Array<AppContent> = [
     },
   },
   {
+    label: 'Notifications',
     path: '/notifications',
     element: <Notifications />,
     navInfo: {
@@ -59,6 +65,7 @@ const APP_CONTENT: Array<AppContent> = [
     },
   },
   {
+    label: 'Account',
     path: '/account',
     element: <Account />,
     navInfo: {
@@ -67,6 +74,7 @@ const APP_CONTENT: Array<AppContent> = [
     },
   },
   {
+    label: 'Profile',
     path: '/profile',
     element: <Profile />,
   },
@@ -87,6 +95,8 @@ const App = () => {
               {APP_CONTENT.map(({ path, element }) => (
                 <Route path={path} element={element} key={path} />
               ))}
+
+              {/* <Route path="/logout" element={} /> */}
             </Routes>
           </main>
         </Router>

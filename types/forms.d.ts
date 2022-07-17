@@ -9,7 +9,7 @@ export declare global {
    * @description specs for a form input
    * @param label form label
    * @param type input type
-   * @param defaultValue input starting value
+   * @param defaultValue input's starting value
    * @param required whether or not the input is required
    * @param options list of options if input requires it
    * @param props any additional input props
